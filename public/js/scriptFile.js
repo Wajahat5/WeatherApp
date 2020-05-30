@@ -15,7 +15,8 @@ weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     m1.textContent="Loading...."
     if(s.value){
-    fetch('http://localhost:3000/forecast?location='+s.value).then((response)=>{
+        //http://localhost:3000/forecast?location=
+    fetch('/forecast?location='+s.value).then((response)=>{
         response.json().then((data)=>{
            
             console.log(data)
