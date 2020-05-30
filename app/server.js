@@ -2,6 +2,7 @@ const express=require('express')
 const path=require('path')
 const hbs=require('hbs')
 const app=express()
+const port=process.env.PORT||3000
 const publicDirPath=path.join(__dirname,'../public')
 const partialsPath=path.join(__dirname,'../partials')
 const search=require('./weatherApp.js')
@@ -71,6 +72,6 @@ app.get('*',(req,res)=>{
         name: 'Wajahat'
     })
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server is up on port 3000')
 })
